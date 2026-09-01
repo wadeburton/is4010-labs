@@ -1,0 +1,17 @@
+"""Lab 02: Functions for greeting, parity check, and vowel counting."""
+
+
+def make_greeting(name: str) -> str:
+    """Return exactly 'Hello, NAME!' using the supplied name."""
+    return f"Hello, {name}!"
+
+
+def is_even(number: int) -> bool:
+    """Return True when number is even and False otherwise."""
+    return number % 2 == 0
+
+
+def count_vowels(text: str) -> int:
+    """Count a, e, i, o, and u without regard to case; do not count y."""
+    vowels = set("aeiouAEIOU")
+    return sum(1 for char in text if char in vowels)
