@@ -207,7 +207,10 @@ impl StudentDatabase {
         if self.students.is_empty() {
             return 0.0;
         }
-        self.students.values().map(Student::calculate_gpa).sum::<f32>()
+        self.students
+            .values()
+            .map(Student::calculate_gpa)
+            .sum::<f32>()
             / self.students.len() as f32
     }
 
